@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<bean id="carBean" class="com.klogle.domain.Car" scope="prototype">
+		<property name="name" value="BMW-Z4"></property>
+	</bean>
+	<bean id="boss" class="com.klogle.domain.boss" scope="prototype">
+		<property name="car" ref="carBean"></property>
+		<property name="office" ref="office"></property>
+	</bean>
+	<bean id="office" class="com.klogle.domain.office" scope="prototype">
+		<property name="officeNo" value="001"></property>
+	</bean>
+</beans>
